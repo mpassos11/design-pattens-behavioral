@@ -20,6 +20,6 @@ $calculadoraDescontos = new CalculadoraDeDescontos();
 
 $orcamento = new Orcamento();
 $orcamento->quantidadeItens = 5;
-$orcamento->valor = 200;
+$orcamento->valor = 600;
 
 echo $calculadoraDescontos->calculaDescontos($orcamento);
