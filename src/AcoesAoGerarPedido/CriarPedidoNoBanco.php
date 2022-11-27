@@ -6,7 +6,7 @@ namespace Alura\DesignPattern\AcoesAoGerarPedido;
 
 use Alura\DesignPattern\Pedido;
 
-class CriarPedidoNoBanco
+class CriarPedidoNoBanco implements AcaoAposGerarPedido
 {
 	public function executaAcao(Pedido $pedido) : void
 	{
