@@ -4,7 +4,10 @@
 namespace Alura\DesignPattern;
 
 
-class ListaDeOrcamentos
+use Exception;
+use Traversable;
+
+class ListaDeOrcamentos implements \IteratorAggregate
 {
 	/**
 	 * @var Orcamento[]
@@ -24,5 +27,10 @@ class ListaDeOrcamentos
 	public function getOrcamentos() : array
 	{
 		return $this->orcamentos;
+	}
+	
+	public function getIterator()
+	{
+		return new \ArrayIterator($this->orcamentos);
 	}
 }
