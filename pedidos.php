@@ -1,17 +1,21 @@
 <?php
 
+use Alura\DesignPattern\DadosPedido;
 use Alura\DesignPattern\Orcamento;
 use Alura\DesignPattern\Pedido;
 
 require 'vendor/autoload.php';
 
 $pedidos = [];
-$hoje = new DateTimeImmutable();
+
+$dadosPedido = new DadosPedido();
+$dadosPedido->dataFinalizacao = new DateTimeImmutable();
+$dadosPedido->nomeCliente = md5('a');
+
 for ($i = 0; $i < 10000; $i++) {
 	$pedido = new Pedido();
 	$pedido->orcamento = new Orcamento();
-	$pedido->nomeCliente = md5((string) rand(1, 100000));
-	$pedido->dataFinalizacao = $hoje;
+	$pedido->dadosPedido = $dadosPedido;
 	
 	$pedidos[] = $pedido;
 }
