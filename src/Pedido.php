@@ -6,6 +6,6 @@ namespace Alura\DesignPattern;
 
 class Pedido
 {
-	public DadosPedido $dadosPedido;
+	public TemplatePedido $templatePedido;
 	public Orcamento $orcamento;
 }
