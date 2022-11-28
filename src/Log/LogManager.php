@@ -1,5 +1,6 @@
 <?php
 
+namespace Alura\DesignPattern\Log;
 
 abstract class LogManager
 {
@@ -15,5 +16,5 @@ abstract class LogManager
 		$logWritter->escreve($mensagemFormatada);
 	}
 	
-	abstract function criarLogWritter() : LoggerWritter;
+	abstract public function criarLogWritter() : LoggerWritter;
 }

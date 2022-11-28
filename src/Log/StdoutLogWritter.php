@@ -1,5 +1,6 @@
 <?php
 
+namespace Alura\DesignPattern\Log;
 
 class StdoutLogWritter implements LoggerWritter
 {

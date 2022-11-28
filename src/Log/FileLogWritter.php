@@ -1,7 +1,8 @@
 <?php
 
+namespace Alura\DesignPattern\Log;
 
-class StdoutLogWritter implements LoggerWritter
+class FileLogWritter implements LoggerWritter
 {
 	
 	private $arquivo;
@@ -13,7 +14,7 @@ class StdoutLogWritter implements LoggerWritter
 	
 	public function escreve(string $mensagemFormatada) : void
 	{
-		fwrite($this->arquivo, $mensagemFormatada);
+		fwrite($this->arquivo, $mensagemFormatada . PHP_EOL);
 	}
 	
 	public function __destruct()
